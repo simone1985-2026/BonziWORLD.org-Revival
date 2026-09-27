@@ -291,6 +291,13 @@ function movehandler(){
                 },
                 {
                     type: 0,
+                    name: "Notice Bulge 2",
+                    callback: (passthrough)=>{
+                        socket.emit("command", {command: "uwu", param: passthrough.name})
+                    }
+                },
+                {
+                    type: 0,
                     name: "Kick",
                     disabled: level < 1,
                     callback: (passthrough)=>{
